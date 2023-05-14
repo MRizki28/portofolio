@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+
+}
+.badge{
+    background-color: #C07F00;
+}
+
+.about {
+    display: flex;
+    min-height: 92vh;
+}
+
+.dark-mode {
+    background-color: #111;
+    color: #fff;
+  }
+  
+  .dark-mode .badge {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .dark-mode a {
+    color: #fff;
+  }
+  
+  .dark-mode a:hover {
+    color: #ccc;
+  }
+
+  .dark-mode ul li a{
+    color: black;
+  }
+
+  .theme-switch-wrapper {
+    margin-top: 3px;
+}
+
+  .theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 10px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+@media screen and (min-width: 390px){
+
+
+    .row{
+        margin-bottom: 120px;
+    }
+    .pict {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 576px)  {
+
+
+    .row{
+        margin-bottom: 120px;
+    }
+    .pict {
+        margin-top: -47px;
+    }
+}
+
