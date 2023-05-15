@@ -1,4 +1,4 @@
-@extends('layoutsbe.Base')
+@extends('be.Base')
 @section('content')
     <div class="col-lg-12">
         <div class="card mb-4">

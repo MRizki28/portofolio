@@ -20,3 +20,15 @@ Route::get('/', function () {
 Route::get('/project', function () {
     return view('frontend.project');
 });
+
+
+Route::get('/cms/backend/project', function () {
+    return view('backend.project');
+});
+
+
+Route::prefix('v1')->controller(OrderanController::class)->group(function () {
+    Route::get('/project', 'getAllData');
+    Route::post('/phone/create', 'createData');
+
+});
