@@ -7,10 +7,10 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul class="navbar-nav">
               <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="/">About</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">Project</a>
+                  <a class="nav-link" href="/project">Project</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link">Certificate</a>
