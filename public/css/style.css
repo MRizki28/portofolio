@@ -37,6 +37,9 @@ body{
   .dark-mode ul li a{
     color: black;
   }
+  .dark-mode .title{
+    color: black;
+  }
 
   .theme-switch-wrapper {
     margin-top: 3px;
