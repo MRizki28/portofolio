@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,8 +28,8 @@ Route::get('/cms/backend/project', function () {
 });
 
 
-Route::prefix('v1')->controller(OrderanController::class)->group(function () {
+Route::prefix('v1')->controller(ProjectController::class)->group(function () {
     Route::get('/project', 'getAllData');
-    Route::post('/phone/create', 'createData');
+    Route::post('/project/create', 'createData');
 
 });
