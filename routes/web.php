@@ -31,5 +31,7 @@ Route::get('/cms/backend/project', function () {
 Route::prefix('v1')->controller(ProjectController::class)->group(function () {
     Route::get('/project', 'getAllData');
     Route::post('/project/create', 'createData');
+    Route::get('/project/get/{uuid}', 'getDataByUuid');
+    Route::put('/project/update/{uuid}', 'updateDataByUuid');
 
 });

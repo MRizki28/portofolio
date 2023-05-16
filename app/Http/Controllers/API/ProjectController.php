@@ -76,4 +76,52 @@ class ProjectController extends Controller
             'data' => $data
         ]);
     }
+
+    public function getDataByUuid($uuid)
+    {
+        $data = ProjectModel::where('uuid', $uuid)->first();
+        return response()->json([
+            'code' => 200,
+            'message' => 'success ge data by uuid',
+            'data' => $data
+        ]);
+    }
+
+    public function updateDataByUuid(Request $request, $uuid)
+    {
+        try {
+            $data = ProjectModel::where('uuid', $uuid)->firstOrFail();
+            $data->title = $request->input('title');
+            $data->link = $request->input('link');
+            if ($request->hasFile('image')) {
+                $file = $request->file('image');
+                $extention = $file->getClientOriginalExtension();
+                $filename = 'PROJECT-' . Str::random(15) . '.' . $extention;
+                Storage::makeDirectory('uploads/project/');
+                $file->move(public_path('uploads/project/'), $filename);
+                $old_file_path = public_path('uploads/project/') . $data->image;
+                if (file_exists($old_file_path)) {
+                    unlink($old_file_path);
+                }
+                $data->image = $filename;
+            }
+            $data->date = $request->input('date');
+            $data->tecnologi1 = $request->input('tecnologi1');
+            $data->tecnologi2 = $request->input('tecnologi2');
+            $data->tecnologi3 = $request->input('tecnologi3');
+            $data->save();
+        } catch (\Throwable $th) {
+            return response()->json([
+                'code' => 401,
+                'message' => 'failed update data',
+                'errors' => $th->getMessage()
+            ]);
+        }
+
+        return response()->json([
+            'code' => 200,
+            'message' => 'success update data',
+            'data' => $data
+        ]);
+    }
 }
