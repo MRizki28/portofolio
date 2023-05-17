@@ -13,7 +13,7 @@
                   <a class="nav-link" href="/project">Project</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link">Certificate</a>
+                  <a class="nav-link" href="/certificate">Certificate</a>
               </li>
              
               <div class="theme-switch-wrapper">
