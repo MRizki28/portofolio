@@ -33,5 +33,6 @@ Route::prefix('v1')->controller(ProjectController::class)->group(function () {
     Route::post('/project/create', 'createData');
     Route::get('/project/get/{uuid}', 'getDataByUuid');
     Route::put('/project/update/{uuid}', 'updateDataByUuid');
+    Route::delete('/project/delete/{uuid}', 'deleteData');
 
 });
