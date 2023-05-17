@@ -97,72 +97,72 @@
         </div>
     </div>
 
-     {{-- modal edit --}}
-     <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="EditModalLabel"
-     aria-hidden="true">
-     <div class="modal-dialog" role="document">
-         <div class="modal-content">
-             <div class="modal-header">
-                 <h5 class="modal-title" id="EditModalLabel">Edit Menu Bazar</h5>
-                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                     <span aria-hidden="true">&times;</span>
-                 </button>
-             </div>
-             <div class="modal-body">
-                 <form id="formEdit" method="POST" enctype="multipart/form-data">
-                     @csrf
-                     @method('PUT')
-                     <input type="hidden" name="uuid" id="uuid">
-                     <div class="form-group">
-                         <label for="title">Title</label>
-                         <input type="text" class="form-control" name="title" id="etitle"
-                             placeholder="Input Here..">
-                     </div>
-                     <div class="form-group">
-                         <label for="link">Link</label>
-                         <input type="text" class="form-control" name="link" id="elink"
-                             placeholder="Input Here">
-                     </div>
-                     <div class="form-group">
-                         <label for="image">Image</label>
-                         <div class="custom-file">
-                             <input type="file" class="custom-file-input" id="eimage" name="image">
-                             <label class="custom-file-label" for="eimage" id="eimage-label">Image</label>
-                         </div>
-                         <img src="" alt="" id="preview" class="mx-auto d-block pb-2"
-                             style="max-width: 200px; padding-top: 23px">
-                     </div>
-                     <div class="form-group">
-                        <label for="date">Date</label>
-                        <input type="date" class="form-control" name="date" id="edate"
-                            placeholder="Input Here">
-                    </div>
-                    <div class="form-group">
-                        <label for="tecnologi1">tecnologi 1</label>
-                        <input type="text" class="form-control" name="tecnologi1" id="etecnologi1"
-                            placeholder="Input Here">
-                    </div>
-                    <div class="form-group">
-                        <label for="tecnologi2">tecnologi 2</label>
-                        <input type="text" class="form-control" name="tecnologi2" id="etecnologi2"
-                            placeholder="Input Here">
-                    </div>
-                    <div class="form-group">
-                        <label for="tecnologi3">tecnologi 3</label>
-                        <input type="text" class="form-control" name="tecnologi3" id="etecnologi3"
-                            placeholder="Input Here">
-                    </div>
-                   
-                 </form>
-             </div>
-             <div class="modal-footer">
-                 <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
-                 <button type="submit" form="formEdit" class="btn btn-outline-primary">Update Data</button>
-             </div>
+    {{-- modal edit --}}
+    <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="EditModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="EditModalLabel">Edit Menu Bazar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEdit" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        @method('PUT')
+                        <input type="hidden" name="uuid" id="uuid">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" name="title" id="etitle"
+                                placeholder="Input Here..">
+                        </div>
+                        <div class="form-group">
+                            <label for="link">Link</label>
+                            <input type="text" class="form-control" name="link" id="elink"
+                                placeholder="Input Here">
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Image</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="eimage" name="image">
+                                <label class="custom-file-label" for="eimage" id="eimage-label">Image</label>
+                            </div>
+                            <img src="" alt="" id="preview" class="mx-auto d-block pb-2"
+                                style="max-width: 200px; padding-top: 23px">
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" class="form-control" name="date" id="edate"
+                                placeholder="Input Here">
+                        </div>
+                        <div class="form-group">
+                            <label for="tecnologi1">tecnologi 1</label>
+                            <input type="text" class="form-control" name="tecnologi1" id="etecnologi1"
+                                placeholder="Input Here">
+                        </div>
+                        <div class="form-group">
+                            <label for="tecnologi2">tecnologi 2</label>
+                            <input type="text" class="form-control" name="tecnologi2" id="etecnologi2"
+                                placeholder="Input Here">
+                        </div>
+                        <div class="form-group">
+                            <label for="tecnologi3">tecnologi 3</label>
+                            <input type="text" class="form-control" name="tecnologi3" id="etecnologi3"
+                                placeholder="Input Here">
+                        </div>
 
-         </div>
-     </div>
- </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                    <button type="submit" form="formEdit" class="btn btn-outline-primary">Update Data</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
@@ -262,7 +262,7 @@
                                 showCancelButton: false,
                                 confirmButtonText: 'OK'
                             }).then(function() {
-                                location.relaod();
+                                location.reload();
                             });
                         }
                     },
@@ -364,5 +364,53 @@
                 });
             });
         })
+
+
+
+        //delete
+        $(document).on('click ', '.delete-confirm', function(e) {
+            e.preventDefault();
+            var uuid = $(this).data('uuid');
+            Swal.fire({
+                title: 'Do your sure want to delete this data ?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, Delete',
+                cancelButtonText: 'Cancel',
+                resolveButton: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: "{{ url('v1/project/delete') }}/" + uuid,
+                        type: 'DELETE',
+                        data: {
+                            "_token": "{{ csrf_token() }}",
+                            "uuid": uuid
+                        },
+                        success: function(response) {
+                            console.log(response);
+                            Swal.fire({
+                                title: 'Data berhasil dihapus',
+                                icon: 'success',
+                                timer: 5000,
+                                showConfirmButton: true
+                            }).then((result) => {
+                                location.reload();
+                            });
+                        },
+                        error: function() {
+                            Swal.fire({
+                                tite: 'Terjadi kesalahan ',
+                                icon: 'error',
+                                timer: 1500,
+                                showConfirmButton: false
+                            });
+                        }
+
+
+                    });
+                }
+            });
+        });
     </script>
 @endsection
