@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Models\ProjectModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Ramsey\Uuid\Uuid;
@@ -123,5 +124,27 @@ class ProjectController extends Controller
             'message' => 'success update data',
             'data' => $data
         ]);
+    }
+
+    public function deleteData($uuid)
+    {
+        try {
+            $data = ProjectModel::where('uuid' , $uuid)->first();
+            $location = 'uploads/project/' . $data->image;
+            $data->delete();
+            if ((File::exists($location))) {
+                File::delete($location);
+            }
+
+            return response()->json([
+                'code' => 200,
+                'message' => 'success delete'
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'message' => 'failed delete',
+                'errors' => $th->getMessage()
+            ]);
+        }
     }
 }
