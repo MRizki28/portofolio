@@ -24,7 +24,7 @@
                         phone.price = Number(phone.price).toLocaleString('en');
                         var card = '<div class="col-md-4 mb-4">' +
                             ' <div class="card" >' +
-                              '<a href="' + phone.link + '">' +
+                              '<a href="' + phone.link + '" target="_blank">' +
                               '<h3 class="card-text text-center title" style= margin-bottom:10px;margin-top:10px;>' + phone.title + '</h3>' +
                               '</a>' +
                             '<img class="card-img-top" src="/uploads/project/' + phone.image +
