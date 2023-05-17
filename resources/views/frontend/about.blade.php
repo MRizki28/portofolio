@@ -19,8 +19,8 @@
                 </div>
                 <div class="mb-3 medsos ">
                     <a href="https://www.instagram.com/m_rizkii28/" target="_blank"><i class="fa-brands fa-instagram fa-2x text-secondary" style="margin-right: 5px "></i></a>
-                    <a href="https://github.com/MRizki28"><i class="fa-brands fa-github fa-2x text-secondary" style="margin-right: 5px "></i></a>
-                    <a href="https://www.linkedin.com/in/muhammad-rizki-442849251/"><i class="fa-brands fa-linkedin fa-2x text-secondary" style="margin-right: 5px "></i></a>
+                    <a href="https://github.com/MRizki28" target="_blank"><i class="fa-brands fa-github fa-2x text-secondary" style="margin-right: 5px "></i></a>
+                    <a href="https://www.linkedin.com/in/muhammad-rizki-442849251/" target="_blank"><i class="fa-brands fa-linkedin fa-2x text-secondary" style="margin-right: 5px "></i></a>
                 </div>
             </div>
         </div>
