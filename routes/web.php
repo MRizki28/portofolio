@@ -48,7 +48,7 @@ Route::prefix('v1')->controller(ProjectController::class)->group(function () {
 Route::prefix('v2')->controller(CertificateController::class)->group(function () {
     Route::get('/certificate', 'getAllData');
     Route::post('/certificate/create', 'createData');
-    Route::get('/project/get/{uuid}', 'getDataByUuid');
+    Route::get('/certificate/get/{uuid}', 'getDataByUuid');
     Route::put('/project/update/{uuid}', 'updateDataByUuid');
     Route::delete('/project/delete/{uuid}', 'deleteData');
 
