@@ -73,4 +73,28 @@ class CertificateController extends Controller
             'data' => $data
         ]);
     }
+
+    public function getDataByUuid ($uuid)
+    {
+
+        if (!Uuid::isValid($uuid)) {
+            return response()->json([
+                'message' => 'uuid invalid'
+            ]);
+        }
+
+        $data = CertificateModel::where('uuid' , $uuid)->first();
+        if (!$data) {
+            return response()->json([
+                'code' => 404,
+                'message' => 'data not found'
+            ]);
+        }else{
+            return response()->json([
+                'code' => 200,
+                'message' => 'sucess get data by uuid',
+                'data' => $data
+            ]);
+        }
+    }
 }
